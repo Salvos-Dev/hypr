@@ -2,7 +2,7 @@
 :root {
     --bg-color: #282828;
     --fg-color: #ebdbb2;
-    --accent: #b16286;
+    --accent: #458588;
     --font: "Iosevka Nerd Font", sans-serif; /* Added sans-serif as a fallback */
 }
 
