@@ -1,0 +1,87 @@
+/* --- Basic Setup --- */
+:root {
+    --bg-color: #282828;
+    --fg-color: #ebdbb2;
+    --accent: #b16286;
+    --font: "Iosevka Nerd Font", sans-serif; /* Added sans-serif as a fallback */
+}
+
+html, body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: var(--font);
+    font-size: 14px;
+    /* Ensure the body takes up the full viewport height */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Centering Container --- */
+body {
+    /* Use Flexbox to center the content */
+    display: flex;
+    flex-direction: column; /* Stack search and shortcuts vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+}
+
+
+/* --- Search Bar Styling --- */
+.search-bar input {
+    background-color: var(--bg-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--fg-color);
+    text-align: center;
+    font-size: 1.5em; /* Made the font a bit larger */
+    font-family: var(--font);
+    width: 60vw;      /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    min-height: 50px;
+    padding: 10px;
+    color: var(--fg-color);
+    /* Added a transition for a smooth focus effect */
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-bottom: 2px solid var(--accent);
+    outline: none; /* Removes the default browser outline */
+}
+
+.search-bar input::placeholder {
+    color: var(--fg-color);
+    opacity: 0.5; /* Made the placeholder slightly less prominent */
+    font-family: var(--font);
+}
+
+/* --- Shortcuts List Styling (New) --- */
+#shortcuts-container {
+    display: none; /* Hidden by default, shown by JS */
+    margin-top: 30px;
+    text-align: left;
+}
+
+#shortcuts-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Display in columns for wider screens if the list gets long */
+    column-count: 2;
+    column-gap: 40px;
+}
+
+#shortcuts-container li {
+    font-size: 1.1em;
+    padding: 5px 0;
+}
+
+/* Style for the shortcut key (e.g., @arch) */
+#shortcuts-container .shortcut-key {
+    color: var(--accent);
+    font-weight: bold;
+    display: inline-block;
+    width: 80px; /* Aligns the arrows */
+}
