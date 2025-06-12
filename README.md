@@ -30,7 +30,7 @@ On Arch Linux you can run the following command:
 
 `sudo pacman -S --needed - < pkglist.txt`
 
-If you aren't using Arch Linux refer to your distributions documentation as I am ONLY supporting Arch Linux.
+If you aren't using Arch Linux refer to your distribution's documentation as I am ONLY supporting Arch Linux.
 
 ## Final setup
 

@@ -1,0 +1,10 @@
+foot
+neovim
+firefox
+thunar
+hyprpaper
+hyprpolkitagent
+rofi-wayland
+zsh
+zsh-syntax-highlighting
+zsh-completions
