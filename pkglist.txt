@@ -8,3 +8,4 @@ rofi-wayland
 zsh
 zsh-syntax-highlighting
 zsh-completions
+xdg-desktop-portal-hyprland
