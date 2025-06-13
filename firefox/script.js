@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             search: 'site:hypr.land',
             url: 'https://hypr.land'
         },
+        '@mdn': {
+            search: 'site:developer.mozilla.org',
+            url: 'https://developer.mozilla.org'
+        },
     };
 
     const searchForm = document.getElementById('search-form');
