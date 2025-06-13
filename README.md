@@ -26,6 +26,8 @@ After you have [Hyprland](https://hypr.land) installed, you'll need the followin
 
 - Hypr Polkit Agent (Authentication)
 
+- XDG Desktop Portal Hyprland (Authentication)
+
 On Arch Linux you can run the following command:
 
 `sudo pacman -S --needed - < pkglist.txt`
