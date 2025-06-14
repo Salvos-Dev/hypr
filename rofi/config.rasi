@@ -9,8 +9,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: rgba(60, 60, 60, 0.6);
-  bg-selected: #458588;
+  bg: rgba(50, 50, 50, 0.5);
+  bg-selected: #b16286;
 
   fg: #ebdbb2;
   fg-selected: #282828;
