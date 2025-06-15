@@ -57,4 +57,9 @@ require('lazy').setup({
             })
         end,
     },
+
+    -- Remove background
+    {
+        'xiyaowong/transparent.nvim',
+    },
 })
