@@ -18,11 +18,15 @@ After you have [Hyprland](https://hypr.land) installed, you'll need the followin
 
 - Zsh (Shell)
 
+- Starship (Prompt)
+
 - Thunar (File Manager)
 
 - Firefox (Web Browser)
 
 - Hyprpaper (Wallpaper Selection)
+
+- Hyprshot (Screenshots)
 
 - Hypr Polkit Agent (Authentication)
 

@@ -3,9 +3,13 @@ neovim
 firefox
 thunar
 hyprpaper
+hyprshot
 hyprpolkitagent
 rofi-wayland
 zsh
 zsh-syntax-highlighting
 zsh-completions
 xdg-desktop-portal-hyprland
+starship
+ffmpegthumbnailer
+tumbler
