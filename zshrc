@@ -2,7 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob nomatch notify
+setopt autocd extendedglob nomatch notify prompt_subst
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -10,6 +10,8 @@ bindkey -v
 zstyle :compinstall filename '/home/salvos/.zshrc'
 
 autoload -Uz compinit
+autoload -Uz vcs_info
+precmd() { vcs_info }
 compinit
 # End of lines added by compinstall
 
@@ -29,8 +31,7 @@ alias wifi-connect='iwctl station wlan0 connect'
 export SUDO_EDITOR='nvim'
 export PATH="$HOME/.local/bin:$PATH"
 
-# Prompt
-PS1='[%n@%m %1~]$ '
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 pfetch
+eval "$(starship init zsh)"

@@ -1,0 +1,22 @@
+[lua]
+format = 'via [Lua $version](bold blue) '
+
+[python]
+format = 'via [Python $version](bold green) '
+
+[rust]
+format = 'via [Rust $version](bold yellow) '
+
+[package]
+disabled = true
+
+[git_status]
+ahead = '[Ahd\($count\)](red)'
+behind = '[Bhd\($count\)](red)'
+untracked = '[Un\($count\)](red)'
+modified = '[Mod\($count\)](red)'
+staged = '[Stg\($count\)](green)'
+up_to_date = '[Upd](green)'
+renamed = '[Rn\($count)\](red)'
+deleted = '[Del\($count)\](red)'
+diverged = '[Div\($ahead_count\)\($behind_count\)](red)'
