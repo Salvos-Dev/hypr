@@ -1,0 +1,86 @@
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 4,
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "battery",
+        "tray"
+    ],
+
+    // -------------------------------------------------------------------------
+    // Module Details
+    // -------------------------------------------------------------------------
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%I:%M %p}", // 12-hour format with AM/PM
+        "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "󰂄  {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    "network": {
+        // "interface": "wlp2s0", // Uncomment and set your network interface
+        "format-wifi": "󰤨  {signalStrength}%",
+        "format-ethernet": "󰈀  Connected",
+        "format-disconnected": "󰤮  Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰 {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    }
+}

@@ -1,0 +1,90 @@
+/* -----------------------------------------------------------------------------
+ * General styles
+ * -------------------------------------------------------------------------- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka Nerd Font", monospace;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(60, 60, 60, 0.0);
+    color: #ebdbb2;
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+#workspaces,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray {
+    padding: 0 10px;
+    margin: 4px 0px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Individual module styles
+ * -------------------------------------------------------------------------- */
+
+#clock {
+    font-weight: bold;
+}
+
+#battery {
+    color: #98971a;
+}
+
+#battery.critical, #battery.warning {
+    color: #cc241d;
+}
+
+#network {
+    color: #458588;
+}
+
+#network.disconnected {
+    color: #cc241d;
+}
+
+#pulseaudio {
+    color: #b16286;
+}
+
+#pulseaudio.muted {
+    color: #a89984;
+}
+
+#tray {
+    background-color: transparent;
+    margin-right: 4px;
+    border-radius: 4px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Workspaces
+ * -------------------------------------------------------------------------- */
+#workspaces button {
+    padding: 0 5px;
+    color: #ebdbb2;
+    background-color: transparent;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+#workspaces button.active {
+    color: #b16286;
+}
+
+#workspaces button.urgent {
+    color: #cc241d;
+}
