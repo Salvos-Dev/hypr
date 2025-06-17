@@ -1,8 +1,8 @@
 configuration {
-  display-drun: "Applications:";
+  display-drun: " ";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "Iosevka Nerd Font 10";
+  font: "Iosevka Nerd Font 11";
   modi: "window,run,drun";
 }
 
@@ -10,10 +10,10 @@ configuration {
 
 * {
   bg: rgba(50, 50, 50, 0.5);
-  bg-selected: #b16286;
+  bg-selected: @bg;
 
   fg: #ebdbb2;
-  fg-selected: #282828;
+  fg-selected: #b16286;
 
   
   border: 0;
@@ -23,7 +23,7 @@ configuration {
 }
 
 window {
-  width: 50%;
+  width: 25%;
   background-color: @bg;
   border-radius: 10px;
 }
@@ -43,6 +43,7 @@ element-text {
   background-color: transparent;
   text-color: inherit;
   vertical-align: 0.5;
+  horizontal-align: 0.5;
 }
 
 element-icon {
