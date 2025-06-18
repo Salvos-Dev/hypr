@@ -40,9 +40,7 @@ readonly PACKAGES=(
     polkit-kde-agent
     xdg-desktop-portal-hyprland
     waybar
-    # Add any other base dependencies here
-    git
-    base-devel
+    ttf-iosevka-nerd
 )
 
 # Define symbolic links based on your README.
