@@ -20,6 +20,8 @@ After you have [Hyprland](https://hypr.land) installed, you'll need the followin
 
 - Foot (Terminal Emulator)
 
+- Iosevka Nerd Font (Font)
+
 - Rofi Wayland (Menu/Launcher)
 
 - Neovim (Editor)

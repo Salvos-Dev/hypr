@@ -14,3 +14,4 @@ xdg-desktop-portal-hyprland
 starship
 ffmpegthumbnailer
 tumbler
+ttf-iosevka-nerd
