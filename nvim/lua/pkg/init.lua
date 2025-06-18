@@ -62,4 +62,25 @@ require('lazy').setup({
     {
         'xiyaowong/transparent.nvim',
     },
+
+    -- Terminal
+    {
+        'akinsho/toggleterm.nvim',
+        version = "*",
+        config = true, -- This will run the default setup()
+        -- You can also add custom configuration here
+        opts = {
+            shade_terminals = false,
+            direction = 'float',
+            highlights = {
+                FloatBorder = {
+                    guifg = '#b16286'
+                },
+            },
+
+            float_opts = {
+                border = 'rounded',
+            },
+        }
+    },
 })

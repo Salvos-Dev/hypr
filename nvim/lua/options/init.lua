@@ -49,3 +49,6 @@ vim.opt.expandtab = true
 
 -- Disable dashboard
 vim.opt.shortmess:append('I')
+
+-- Terminal
+vim.opt.hidden = true
