@@ -10,6 +10,8 @@ I'd recommend reading the install guide at [Hyprland](https://wiki.hypr.land/Get
 
 If you are using an NVIDIA GPU I'd also recommend reading the [NVIDIA](https://wiki.hypr.land/Nvidia/) specific tweaks though my setup is for an NVIDIA system.
 
+**It is recommend to use the provided install.sh the rest of this guide is for a manual install**
+
 ## Getting my configurations
 
 The rest of this guide is for Arch Linux ONLY
