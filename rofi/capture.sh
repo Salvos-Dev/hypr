@@ -31,7 +31,7 @@ case ${chosen} in
         (sleep 0.5 && run_cmd --screen) &
         ;;
     $window)
-        run_cmd --window
+        (sleep 0.5 && run_cmd --window) &
         ;;
 esac
 
