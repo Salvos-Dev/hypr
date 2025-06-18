@@ -26,6 +26,9 @@ alias gcc='gcc -Wall'
 alias wifi-scan='iwctl station wlan0 scan'
 alias wifi-list='iwctl station wlan0 get-networks'
 alias wifi-connect='iwctl station wlan0 connect'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
 
 # Exports
 export SUDO_EDITOR='nvim'
