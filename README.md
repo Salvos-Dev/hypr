@@ -32,6 +32,8 @@ After you have [Hyprland](https://hypr.land) installed, you'll need the followin
 
 - XDG Desktop Portal Hyprland (Authentication)
 
+- Waybar (Status bar)
+
 On Arch Linux you can run the following command:
 
 `sudo pacman -S --needed - < pkglist.txt`
@@ -50,6 +52,10 @@ ln -s ~/config/hypr/nvim/init.lua ~/.config/nvim/init.lua
 ln -s ~/config/hypr/nvim/lua ~/.config/nvim/lua
 
 ln -s ~/.config/hypr/rofi/config.rasi ~/.config/rofi/config.rasi
+
+ln -s ~/.config/hypr/waybar/style.css ~/.config/waybar/style.css
+
+ln -s ~/.config/hypr/waybar/config.jsonc ~/.config/waybar/config.jsonc
 
 ln -s ~/.config/hypr/zshrc ~/.zshrc
 ```
