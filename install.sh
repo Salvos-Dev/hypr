@@ -121,10 +121,10 @@ main() {
     local pkglist_path="${CLONE_DIR}/pkglist.txt"
     if [ -f "$pkglist_path" ]; then
         log "$C_GREEN" "Found 'pkglist.txt' in repository. Using it to install packages."
-        paru -Syu --needed --noconfirm - < "$pkglist_path"
+        sudo pacman -Syu --needed --noconfirm - < "$pkglist_path"
     else
         log "$C_YELLOW" "No 'pkglist.txt' found. Using package list defined in the script."
-        paru -Syu --needed --noconfirm "${PACKAGES[@]}"
+        sudo pacman -Syu --needed --noconfirm "${PACKAGES[@]}"
     fi
     log "$C_GREEN" "Packages installed successfully."
 
