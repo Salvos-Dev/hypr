@@ -52,3 +52,6 @@ vim.opt.shortmess:append('I')
 
 -- Terminal
 vim.opt.hidden = true
+
+-- Word wrap
+vim.opt.wrap = false
