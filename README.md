@@ -1,10 +1,8 @@
 # Hyprland Dotfiles
 
 ![Clean desktop](screenshots/clean.png)
-<img src="clean.png" width="600" height="400">
 
 ![Busy desktop](screenshots/busy.png)
-<img src="busy.png" width="600" height="400">
 
 ## Installation
 
