@@ -12,6 +12,8 @@ If you are using an NVIDIA GPU I'd also recommend reading the [NVIDIA](https://w
 
 ## Getting my configurations
 
+The rest of this guide is for Arch Linux ONLY
+
 After you have [Hyprland](https://hypr.land) installed, you'll need the following dependencies:
 
 - Foot (Terminal Emulator)

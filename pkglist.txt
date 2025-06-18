@@ -2,6 +2,7 @@ foot
 neovim
 firefox
 thunar
+hyprland
 hyprpaper
 hyprshot
 hyprpolkitagent
