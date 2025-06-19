@@ -24,6 +24,9 @@ vim.opt.signcolumn = 'yes'
 -- Active line
 vim.opt.cursorline = true
 
+-- Color column
+vim.opt.colorcolumn = '100'
+
 -- Update time
 vim.opt.updatetime = 250
 
