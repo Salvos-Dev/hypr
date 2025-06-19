@@ -12,27 +12,29 @@ If you are using an NVIDIA GPU I'd also recommend reading the [NVIDIA](https://w
 
 **It is recommend to use the provided install.sh the rest of this guide is for a manual install**
 
-## Getting my configurations
+Simply clone the repository and run the installation script:
 
-The rest of this guide is for Arch Linux ONLY
+```
+git clone https://github.com/Salvos-Dev/hypr.git ~/.config/
+
+./install.sh
+```
+
+## Installation (Manual)
+
+This guide assumes you're using Arch Linux, these configuration while they *can* work on other distributions Arch Linux is the intended platform.
 
 After you have [Hyprland](https://hypr.land) installed, you'll need the following dependencies:
 
-- Foot (Terminal Emulator)
-
 - Iosevka Nerd Font (Font)
 
-- Rofi Wayland (Menu/Launcher)
-
-- Neovim (Editor)
+- Foot (Terminal Emulator)
 
 - Zsh (Shell)
 
 - Starship (Prompt)
 
-- Thunar (File Manager)
-
-- Firefox (Web Browser)
+- Waybar (Status bar)
 
 - Hyprpaper (Wallpaper Selection)
 
@@ -42,15 +44,17 @@ After you have [Hyprland](https://hypr.land) installed, you'll need the followin
 
 - XDG Desktop Portal Hyprland (Authentication)
 
-- Waybar (Status bar)
+- Rofi Wayland (Menu/Launcher)
+
+- Neovim (Editor)
+
+- Thunar (File Manager)
+
+- Firefox (Web Browser)
 
 On Arch Linux you can run the following command:
 
 `sudo pacman -S --needed - < pkglist.txt`
-
-If you aren't using Arch Linux refer to your distribution's documentation as I am ONLY supporting Arch Linux.
-
-## Final setup
 
 For everything to work correctly you need to make some symbolic links for all the configurations to load:
 
@@ -69,3 +73,5 @@ ln -s ~/.config/hypr/waybar/config.jsonc ~/.config/waybar/config.jsonc
 
 ln -s ~/.config/hypr/zshrc ~/.zshrc
 ```
+
+And that's it! Just login to Hyprland and you'll have a funtional and beautiful Hyprland configuration.
