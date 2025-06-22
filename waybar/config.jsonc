@@ -60,7 +60,7 @@
         "format-plugged": "󰂄  {capacity}%",
         "format-alt": "{icon} {time}",
         "format-icons": [" ", " ", " ", " ", " "],
-        "on-click": "$HOME/.config/hypr/rofi/power-save.sh"
+        "on-click-right": "$HOME/.config/hypr/rofi/power-save.sh"
     },
     "network": {
         // "interface": "wlp2s0", // Uncomment and set your network interface
@@ -83,6 +83,7 @@
             "car": "",
             "default": [" ", " ", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
     }
 }
