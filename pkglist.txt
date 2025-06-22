@@ -2,6 +2,7 @@ foot
 neovim
 firefox
 thunar
+kanshi
 hyprland
 hyprpaper
 hyprshot

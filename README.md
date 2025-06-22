@@ -34,6 +34,8 @@ After you have [Hyprland](https://hypr.land) installed, you'll need the followin
 
 - Starship (Prompt)
 
+- Kanshi (Display configuration)
+
 - Waybar (Status bar)
 
 - Hyprpaper (Wallpaper Selection)

@@ -33,6 +33,7 @@ readonly PACKAGES=(
     neovim
     zsh
     starship
+    kanshi
     thunar
     firefox
     hyprpaper
