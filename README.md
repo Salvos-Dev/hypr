@@ -74,6 +74,8 @@ ln -s ~/.config/hypr/waybar/style.css ~/.config/waybar/style.css
 ln -s ~/.config/hypr/waybar/config.jsonc ~/.config/waybar/config.jsonc
 
 ln -s ~/.config/hypr/zshrc ~/.zshrc
+
+ln -s ~/.config/hypr/kanshi/config ~/.config/kanshi/config
 ```
 
 And that's it! Just login to Hyprland and you'll have a funtional and beautiful Hyprland configuration.
