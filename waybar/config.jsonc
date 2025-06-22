@@ -47,17 +47,18 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%I:%M %p}", // 12-hour format with AM/PM
-        "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": "{:%H:%M}",
+        "format-alt": "{:%H:%M %m/%d}",
+        "tooltip": false
     },
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": "󰂄  {capacity}%",
-        "format-plugged": "󰂄  {capacity}%",
+        "format": "{icon} {capacity}",
+        "format-charging": "󰂄  {capacity}",
+        "format-plugged": "󰂄  {capacity}",
         "format-alt": "{icon} {time}",
         "format-icons": [" ", " ", " ", " ", " "],
         "on-click-right": "$HOME/.config/hypr/rofi/power-save.sh"
@@ -67,13 +68,13 @@
         "format-wifi": "󰤨  {signalStrength}%",
         "format-ethernet": "󰈀  Connected",
         "format-disconnected": "󰤮  Disconnected",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip": false,
         "on-click": "$HOME/.config/hypr/rofi/wifi.sh"
     },
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "󰂰 {volume}%",
+        "format": "{icon} {volume}",
+        "format-bluetooth": "󰂰 {volume}",
         "format-muted": "󰝟 Muted",
         "format-icons": {
             "headphone": "󰋋",
