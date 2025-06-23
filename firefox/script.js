@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const siteShortcuts = {
         '@mail': 'https://mail.proton.me/u/0/inbox',
         '@bril': 'https://brilliant.org',
+        '@dis': 'https://discord.com/app',
     };
 
     // For shortcuts that act as search operators
