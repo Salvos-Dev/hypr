@@ -65,7 +65,7 @@
     },
     "network": {
         // "interface": "wlp2s0", // Uncomment and set your network interface
-        "format-wifi": "󰤨  {signalStrength}%",
+        "format-wifi": "󰤨  {essid}",
         "format-ethernet": "󰈀  Connected",
         "format-disconnected": "󰤮  Disconnected",
         "tooltip": false,
