@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. Define your shortcut types ---
-
     // For shortcuts that go directly to a site
     const siteShortcuts = {
         '@mail': 'https://mail.proton.me/u/0/inbox',
+        '@bril': 'https://brilliant.org',
     };
 
     // For shortcuts that act as search operators
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             search: 'site:wiki.archlinux.org',
             url: 'https://wiki.archlinux.org/'
         },
-        '@gemini': {
+        '@gem': {
             search: 'site:gemini.google.com',
             url: 'https://gemini.google.com/'
         },
@@ -28,11 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '@git': {
             search: 'site:github.com',
-            url: 'https://github.com/'
+            url: 'https://github.com/' // The base URL for path expansion
         },
         '@yt': {
             search: 'site:youtube.com',
             url: 'https://youtube.com/'
+        },
+        '@ytm': {
+            search: 'site:music.youtube.com',
+            url: 'https://music.youtube.com/'
         },
         '@hypr': {
             search: 'site:hypr.land',
@@ -50,19 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchForm.addEventListener('submit', (event) => {
         const query = searchInput.value.trim();
-        const queryParts = query.split(' ');
-        const firstPart = queryParts[0];
 
-        // --- 2. Implement the new logic flow ---
-
-        // A. Check for the @links command
+        // A. Check for the @links command (no changes here)
         if (query === '@links') {
             event.preventDefault();
-            // Combine both shortcut types for display
+            if (shortcutsContainer.style.display === 'block') {
+                shortcutsContainer.style.display = 'none';
+                shortcutsContainer.innerHTML = '';
+                searchInput.value = '';
+                return;
+            }
             const allShortcuts = {...siteShortcuts, ...searchShortcuts};
             shortcutsContainer.innerHTML = '';
             const list = document.createElement('ul');
-            for (const key in allShortcuts) {
+            const sortedKeys = Object.keys(allShortcuts).sort();
+            for (const key of sortedKeys) {
                 const listItem = document.createElement('li');
                 const url = typeof allShortcuts[key] === 'string' ? allShortcuts[key] : allShortcuts[key].url;
                 const cleanUrl = url.replace(/^(https?:\/\/)?(www\.)?/, '').replace(/\/$/, '');
@@ -77,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         shortcutsContainer.style.display = 'none';
 
-        // B. Check for a Site Shortcut (exact match)
+        // B. Check for direct site shortcuts (no changes here)
         if (siteShortcuts[query]) {
             event.preventDefault();
             window.open(siteShortcuts[query], '_blank');
@@ -85,26 +90,42 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // C. Check for a Search Shortcut (starts with the key)
-        if (searchShortcuts[firstPart]) {
-            event.preventDefault();
-            const shortcutData = searchShortcuts[firstPart];
-            
-            // If the user only typed the key (e.g., "@arch"), go to the main URL
-            if (queryParts.length === 1) {
-                window.open(shortcutData.url, '_blank');
-            } else {
-                // Otherwise, build a custom Google search
-                const searchTerm = queryParts.slice(1).join(' ');
-                const finalQuery = `${searchTerm} ${shortcutData.search}`;
-                const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(finalQuery)}`;
-                window.open(searchUrl, '_blank');
+        // C. REVISED LOGIC for search and path-based shortcuts
+        for (const key in searchShortcuts) {
+            if (query.startsWith(key)) {
+                event.preventDefault();
+                const shortcutData = searchShortcuts[key];
+                const remainder = query.substring(key.length);
+
+                // Case 1: Path expansion (e.g., "@git/user/repo")
+                if (remainder.startsWith('/')) {
+                    // Combine base URL with the new path. 
+                    // .replace(/\/$/, '') on the base URL prevents double slashes (e.g., "site.com//path")
+                    const finalUrl = shortcutData.url.replace(/\/$/, '') + remainder;
+                    window.open(finalUrl, '_blank');
+                } 
+                // Case 2: Search query (e.g., "@git my project")
+                else if (remainder.startsWith(' ') && remainder.trim().length > 0) {
+                    const searchTerm = remainder.trim();
+                    const finalQuery = `${searchTerm} ${shortcutData.search}`;
+                    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(finalQuery)}`;
+                    window.open(searchUrl, '_blank');
+                } 
+                // Case 3: Just the shortcut key (e.g., "@git")
+                else if (remainder.length === 0) {
+                    window.open(shortcutData.url, '_blank');
+                } 
+                // If it's none of the above (e.g. "@gitfoo"), we let it fall through
+                else {
+                    continue; // continue to next key in case of partial match like "@g" vs "@git"
+                }
+                
+                searchInput.value = '';
+                return; // Found and handled a shortcut, so we're done.
             }
-            searchInput.value = '';
-            return;
         }
 
-        // D. Check for a full URL
+        // D. Check for a valid URL (no changes here)
         const urlPattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/i;
         if (urlPattern.test(query)) {
             event.preventDefault();
@@ -116,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
             searchInput.value = '';
             return;
         }
-
-        // E. Default to a regular Google search
+        
+        // E. Default Google Search (no changes here, form submits normally)
         setTimeout(() => { searchInput.value = ''; }, 100);
     });
 });
