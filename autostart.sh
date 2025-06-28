@@ -18,3 +18,4 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dunst &
 systemctl --user start hyprpolkitagent &
 waybar &
+bluman-applet &

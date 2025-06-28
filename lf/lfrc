@@ -1,0 +1,8 @@
+# Image preview
+set sixel
+
+# Preview script
+set previewer ~/.config/hypr/lf/preview.sh
+
+# Keymaps
+map . set hidden!
