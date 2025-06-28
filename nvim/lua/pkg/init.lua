@@ -83,4 +83,10 @@ require('lazy').setup({
             },
         }
     },
+
+    -- Tmux integration
+    {
+        'christoomey/vim-tmux-navigator',
+        lazy = false,
+    },
 })

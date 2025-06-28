@@ -16,3 +16,5 @@ vim.keymap.set('t', '<leader>ft', '<cmd>ToggleTerm<CR>', {
   silent = true,
   desc = "Toggle floating terminal"
 })
+
+-- Tmux
