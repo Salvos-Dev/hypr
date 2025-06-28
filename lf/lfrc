@@ -1,0 +1,4 @@
+set sixel
+set previewer ~/.config/hypr/lf/preview.sh
+
+map . set hidden!
