@@ -50,9 +50,9 @@ After you have [Hyprland](https://hypr.land) installed, you'll need the followin
 
 - Neovim (Editor)
 
-- Thunar (File Manager)
+- Lf (File Manager)
 
-- Firefox (Web Browser)
+- Chromium (Web Browser)
 
 On Arch Linux you can run the following command:
 

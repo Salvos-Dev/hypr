@@ -1,7 +1,8 @@
 foot
 neovim
-firefox
+chromium
 thunar
+lf
 kanshi
 hyprland
 hyprpaper
