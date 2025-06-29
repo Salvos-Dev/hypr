@@ -32,10 +32,16 @@ alias wifi-list='iwctl station wlan0 get-networks'
 alias wifi-connect='iwctl station wlan0 connect'
 
 # Git
+alias gs='git status'
+alias gd='git diff'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
-alias gs='git status'
+alias gu='git pull'
+alias gl='git log'
+alias gb='git branch'
+alias gi='git init'
+alias gcl='git clone'
 
 # Exports
 export SUDO_EDITOR='nvim'
